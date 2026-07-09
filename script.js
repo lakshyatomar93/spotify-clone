@@ -13,60 +13,101 @@ function formatTime(seconds) {
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
 }
 
-
 async function getsongs(folder) {
-    console.log("getsongs called");
     currfolder = folder;
-    // let a = fetch(`http://127.0.0.1:3000/${folder}/`);
-    let a = fetch(`/${folder}/`);
-    let response = await (await a).text();
-    console.log(response);
-    let div = document.createElement("div");
 
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a");
-    songs = [];
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        console.log(element.href);
-        if (element.href.endsWith("mp3")) {
-            songs.push(
-                decodeURIComponent(element.href).replace(/\\/g, "/").split("/").pop());
-        }
-    }
-    let songul = document.querySelector(".songlist").getElementsByTagName("ul")[0];
-    songul.innerHTML = ""
+    const response = await fetch(`./${folder}/songs.json`);
+    songs = await response.json();
+
+    let songul = document.querySelector(".songlist ul");
+    songul.innerHTML = "";
+
     for (const song of songs) {
-        var displayname = song
+        let displayname = decodeURIComponent(song)
             .replaceAll("%5", " ")
             .replaceAll(/\d/g, "")
             .replaceAll("-", " ")
             .replaceAll("C", "")
-            .replaceAll(".mp", "")
+            .replaceAll(".mp", "");
 
-        songul.innerHTML = songul.innerHTML + `<li data-song="${song}" >
-        <img src="svgfolder/music1.svg" class="svg" alt="music logo">
-        <div class="info">
-        <div>${displayname}</div>
-        </div>
-        <div class="playnow">
-        <span>Play now</span>
-        <img src="svgfolder/play.svg" class="svg" alt="">
-        </div>
-        </</li>`;
+        songul.innerHTML += `
+        <li data-song="${song}">
+            <img src="svgfolder/music1.svg" class="svg" alt="">
+            <div class="info">
+                <div>${displayname}</div>
+            </div>
+            <div class="playnow">
+                <span>Play now</span>
+                <img src="svgfolder/play.svg" class="svg" alt="">
+            </div>
+        </li>`;
     }
 
-    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e => {
-
-        e.addEventListener("click", element => {
+    Array.from(songul.getElementsByTagName("li")).forEach((e) => {
+        e.addEventListener("click", () => {
             document.querySelector(".playbar").style.display = "block";
             playMusic(e.dataset.song);
-
-        })
+        });
     });
 
     return songs;
 }
+
+// async function getsongs(folder) {
+//     console.log("getsongs called");
+//     currfolder = folder;
+//     // let a = fetch(`http://127.0.0.1:3000/${folder}/`);
+//     let a = fetch(`./${folder}/`);
+
+//     let response = await (await a).text();
+//     console.log(response);
+//     let div = document.createElement("div");
+
+//     div.innerHTML = response;
+//     let as = div.getElementsByTagName("a");
+    
+//     songs = [];
+//     for (let index = 0; index < as.length; index++) {
+//         const element = as[index];
+//         console.log(element.href);
+//         if (element.href.endsWith("mp3")) {
+//             songs.push(
+//                 decodeURIComponent(element.href).replace(/\\/g, "/").split("/").pop());
+//         }
+//     }
+//     let songul = document.querySelector(".songlist").getElementsByTagName("ul")[0];
+//     songul.innerHTML = ""
+//     for (const song of songs) {
+//         var displayname = song
+//             .replaceAll("%5", " ")
+//             .replaceAll(/\d/g, "")
+//             .replaceAll("-", " ")
+//             .replaceAll("C", "")
+//             .replaceAll(".mp", "")
+
+//         songul.innerHTML = songul.innerHTML + `<li data-song="${song}" >
+//         <img src="svgfolder/music1.svg" class="svg" alt="music logo">
+//         <div class="info">
+//         <div>${displayname}</div>
+//         </div>
+//         <div class="playnow">
+//         <span>Play now</span>
+//         <img src="svgfolder/play.svg" class="svg" alt="">
+//         </div>
+//         </</li>`;
+//     }
+
+//     Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e => {
+
+//         e.addEventListener("click", element => {
+//             document.querySelector(".playbar").style.display = "block";
+//             playMusic(e.dataset.song);
+
+//         })
+//     });
+
+//     return songs;
+// }
 
 const playMusic = (track, pause = false) => {
 
@@ -83,7 +124,7 @@ const playMusic = (track, pause = false) => {
     // console.log(displayName);
 
     document.querySelector(".songinfo").textContent = displayName;
-    currentsong.src = `/${currfolder}/` + track;
+    currentsong.src = `./${currfolder}/${track}`;
     if (!pause) {
         currentsong.play();
         play.src = "svgfolder/pause.svg";
