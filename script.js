@@ -126,7 +126,11 @@ const playMusic = (track, pause = false) => {
     document.querySelector(".songinfo").textContent = displayName;
     currentsong.src = `./${currfolder}/${track}`;
     if (!pause) {
-        currentsong.play();
+        // currentsong.play();
+        currentsong.play().catch(err => console.error(err));
+         console.log("Track:", track);
+console.log("Current Folder:", currfolder);
+console.log("Audio URL:", currentsong.src);
         play.src = "svgfolder/pause.svg";
     }
     // document.querySelector(".songinfo").innerHTML = decodeURI(track)
@@ -136,9 +140,7 @@ const playMusic = (track, pause = false) => {
 async function main() {
 
     await getsongs("songs/cs");
-    console.log(Array.isArray(songs));
-    console.log(typeof songs);
-    console.log(songs);
+   
     playMusic(songs[0], true)
 
 
