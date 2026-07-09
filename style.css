@@ -16,10 +16,10 @@ body {
     height: 45px;
     top: 0;
     width: 100%;
-    overflow: auto;
+    overflow: visible;
     justify-content: space-between;
     padding: 10px;
-    z-index: 1000;
+    z-index: 100;
     align-items: center;
     scrollbar-width: none;
 }
@@ -48,7 +48,6 @@ body {
     height: 45px;
     background-color: #1f1f1f;
     align-content: center;
-    text-align: center;
     margin: 0px 14px 0px 35px;
     border-radius: 50%;
 }
@@ -177,6 +176,7 @@ body {
     border-radius: 10px;
     top: 70px;
     overflow-y: auto;
+    z-index: 1;
 }
 
 .left::-webkit-scrollbar {
