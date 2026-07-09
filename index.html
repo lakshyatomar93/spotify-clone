@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="hover.css">
+</head>
+
+<body>
+    <div class="nav flex pointer ">
+        <div class="next1">
+            <img src="svgfolder/hamburger.svg" class="svg hamburger" alt="">
+            <div class="Spo">
+                <a href="https://open.spotify.com/" title="Spotify">
+                    <img src="logo.svg" class="img svg" alt="Spotify">
+                    <!-- <span class="spotify">Spotify</span> -->
+                </a>
+            </div>
+            <div class="home">
+                <img src="homelogo.svg" class="svg" alt="Home">
+                <span class="homeicon">Home</span>
+            </div>
+            <div class="search flex">
+                <div class="first">
+                    <div class="searchicon ">
+                        <img src="search.svg" class="svg" alt="search">
+                        <span class="icon">Search</span>
+                    </div>
+                    <input type="text" placeholder="What do you want to play?">
+                </div>
+                <div class="second">
+                    <h2>|</h2>
+                    <div class="browseicon">
+                        <img src="browser.svg" class="svg" alt="">
+                        <span class="browse">Browse</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="next">
+            <div class="box">
+                <h4>Promise </h4>
+                <h4>Support </h4>
+                <h4>Download </h4>
+            </div>
+            <h2>|</h2>
+            <div class="next2">
+                <img src="download.svg" class="svg" alt="Download">
+                <p>Install App</p>
+            </div>
+            <div class="login">
+                <p>Log in</p>
+            </div>
+        </div>
+    </div>
+    <div class="container flex">
+        <div class="left">
+            <h3>Your Library</h3>
+            <!-- <img src="plus.svg" alt="plus"> -->
+            <div class="songlist">
+                <ul>
+                </ul>
+            </div>
+       
+          <div class="plus ">
+            <div class="library ">
+                <h4>Create your first playlist</h4>
+                <p>It's easy, we'll help you</p>
+                <div class="create pointer">
+                    <p>Create playlist</p>
+                </div>
+            </div>
+            <div class="library2 ">
+                <h3>Let's find some podcasts to follow</h3>
+                <p>We'll keep you updated on new episodes</p>
+                <div class="create2 pointer">
+                    <p>Browse podcasts</p>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="span pointer">
+                    <a href="https://www.spotify.com/in-en/legal/">
+                        <span>Legal</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/safetyandprivacy/">
+                        <span>Safety & Privacy Center</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+                        <span>Privacy Policy</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/legal/cookies-policy/">
+                        <span>Cookies</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
+                        <span>About Ads</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/accessibility/">
+                        <span>Accessibility</span>
+                    </a>
+                </div>
+                <div class="cookies pointer">
+                    <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener">
+                        <span>Cookies</span>
+                    </a>
+                </div>
+            </div>
+    </div>
+     </div>
+    <div class="right ">
+        <div class="browseall">
+            <h2>Browse all</h2>
+        </div>
+        <div class="playview">
+            <div class="playbar">
+                <div class="seekbar">
+                    <div class="circle"></div>
+                </div>
+                <div class="btns">
+                    <div class="songinfo"></div>
+                    <div class="songbtns svg">
+                        <img src="svgfolder/previous.svg" id="previous" class=" pointer" alt="">
+                        <img src="svgfolder/play.svg" id="play" class="pointer " alt="play">
+                        <img src="svgfolder/next.svg" id="next" class="pointer " alt="">
+                    </div>
+                    <div class="songtime"></div>
+                    <div class="sound svg pointer">
+                        <img src="svgfolder/sound.svg" id="sound" alt="">
+                        <div class="range pointer">
+                            <input type="range" name="volume" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="boxes">
+            <div data-folder="cs" class="music pointer">
+                <h2>Music</h2>
+                <img src="images/music.jpg" alt="music">
+            </div>
+            <div data-folder="ncs" class="music podcasts pointer">
+                <h2>Podcasts</h2>
+                <img src="images/podcasts.jpg" alt="">
+            </div>
+            <div data-folder="cs" class="music live pointer">
+                <h2>Live Events</h2>
+                <img src="images/live events.jpg" alt="">
+            </div>
+            <div data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music made pointer">
+                <h2>Made For You</h2>
+                <img src="images/made for you.jpg" alt="">
+            </div>
+            <div data-folder="cs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music new pointer">
+                <h2>New Releases</h2>
+                <img src="images/new releases.jpg" alt="">
+            </div>
+            <div data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music summer pointer">
+                <h2>Summer</h2>
+                <img src="images/summer.jpg" alt="">
+            </div>
+            <div data-folder="cs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music hindi pointer">
+                <h2>Hindi</h2>
+                <img src="images/bollywood central.jpg" alt="">
+            </div>
+            <div data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music tamil pointer">
+                <h2>Tamil</h2>
+                <img src="images/tamil.jpg" alt="">
+            </div>
+            <div data-folder="cs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music pop pointer">
+                <h2>Pop</h2>
+                <img src="images/pop.jpg" alt="">
+            </div>
+            <div data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music charts pointer">
+                <h2>Charts</h2>
+                <img src="images/charts.jpg" alt="">
+            </div>
+            <div data-folder="cs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music podcastchart pointer">
+                <h2>Podcasts Charts</h2>
+                <img src="images/podcast charts.jpeg" alt="">
+            </div>
+            <div data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music podcastnew pointer">
+                <h2>Podcasts New Releases</h2>
+                <img src="images/podcastnew" alt="">
+            </div>
+            <div data-folder="cs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music video pointer">
+                <h2>Video Podcasts</h2>
+                <img src="images/video.jpg" alt="">
+            </div>
+            <div data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music business pointer">
+                <h2>Business & Technology</h2>
+                <img src="images/bussiness.jpg" alt="">
+            </div>
+            <div data-folder="cs" data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music punjabi pointer">
+                <h2>Punjabi</h2>
+                <img src="images/punjabi.jpg" alt="">
+            </div>
+            <div data-folder="ncs" data-folder="ncs" data-folder="ncs" class="music telugu pointer">
+                <h2>Telugu</h2>
+                <img src="images/telugu.jpg" alt="">
+            </div>
+            <div data-folder="cs" data-folder="ncs" class="music malayalam pointer">
+                <h2>Malayalam</h2>
+                <img src="images/malayalam.jpg" alt="">
+            </div>
+            <div data-folder="ncs" class="music haryanvi pointer">
+                <h2>Haryanvi</h2>
+                <img src="images/haryanvi.jpg" alt="">
+            </div>
+        </div>
+        <div class="footer">
+            <div class="gap"></div>
+            <div class="content">
+                <ul class="list">
+                    <p>Company</p>
+                    <a href="https://www.spotify.com/in-en/about-us/contact/" role="link">
+                        <span>About</span>
+                    </a>
+                    <a href="https://www.lifeatspotify.com/" role="link">
+                        <span>Jobs</span>
+                    </a>
+                    <a href="https://newsroom.spotify.com/" role="link">
+                        <span>For the Record</span>
+                    </a>
+
+                </ul>
+                <ul class="list">
+                    <p>Communities</p>
+                    <a href="https://artists.spotify.com/">
+                        <span>For Artists</span>
+                    </a>
+                    <a href="https://developer.spotify.com/">
+                        <span>Developers</span>
+                    </a>
+                    <a href="https://ads.spotify.com/">
+                        <span>Advertising</span>
+                    </a>
+                    <a href="https://investors.spotify.com/">
+                        <span>Investors</span>
+                    </a>
+                    <a href="https://spotifyforvendors.com/">
+                        <span>Vendors</span>
+                    </a>
+                </ul>
+                <ul class="list">
+                    <p>Useful links</p>
+                    <a href="https://support.spotify.com/">
+                        <span>Support</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/free/">
+                        <span>Free Mobile App</span>
+                    </a>
+                    <a href="/popular-in/in">
+                        <span>Popular by Country</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/import-music/">
+                        <span>Import your music</span>
+                    </a>
+                </ul>
+
+                <ul class="list">
+                    <p>Spotify Plans</p>
+                    <a href="https://www.spotify.com/in-en/premium/#plans">
+                        <span>Premium Standard</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/platinum/#ref=spotifycom_footer_platinum">
+                        <span>Premium Platinum</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/student/#ref=spotifycom_footer_premium_student">
+                        <span>Premium Student</span>
+                    </a>
+                    <a href="https://www.spotify.com/in-en/free/#ref=spotifycom_footer_free">
+                        <span>Spotify Free</span>
+                    </a>
+
+                </ul>
+
+                <div class="social">
+                    <div class="insta image">
+                        <a href="https://instagram.com/spotify">
+                            <img src="instagram.svg" class="svg" alt="instagram">
+                            <span class="hov">Instagram</span>
+                        </a>
+
+                    </div>
+                    <div class="x image">
+                        <a href="https://x.com/spotify">
+                            <img src="X.svg" class="svg" alt="">
+                            <span class="hov">X</span>
+                        </a>
+                    </div>
+                    <div class="face image">
+                        <a href="https://facebook.com/spotify">
+                            <img src="facebook.svg" class="svg" alt="">
+                            <span class="hov">Facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container1">
+                <div class="gap"></div>
+                <div class="copy">© 2026 Spotify AB</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

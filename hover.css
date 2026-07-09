@@ -1,0 +1,151 @@
+/* .Spo {
+  display: flex;
+  position: relative;
+  text-align: center;
+}
+
+.spotify {
+  display: none;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.Spo:hover .spotify {
+  display: block;
+
+  padding: 5px;
+  border: 1px solid white;
+  position: absolute;
+  transform: translateX(65px) translateY(35px);
+  transition: 1s ease-in-out 4s;
+  z-index: 20;
+} */
+
+.home {
+  position: relative;
+  text-align: center;
+}
+
+.homeicon {
+  display: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.home:hover .homeicon {
+  display: block;
+  position: relative;
+  margin-top: 25px;
+  padding: 5px;
+  border-radius: 4px;
+  position: absolute;
+  background-color: #1f1f1f;
+  transform: translateX(5px);
+  transition: 1s ease-in-out 1s;
+  z-index: 999999;
+}
+
+
+.search:hover {
+  border: 1px solid white;
+  border-radius: 34px;
+}
+
+.search input:hover {
+  background: transparent;
+  background-color: #1f1f1f;
+  border-radius: 34px;
+}
+
+.searchicon {
+  display: flex;
+  position: relative;
+  text-align: center;
+}
+
+.icon {
+  display: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.searchicon:hover .icon {
+  display: block;
+  background-color: #1f1f1f;
+  margin-top: 25px;
+  padding: 5px;
+  border-radius: 4px;
+  position: absolute;
+  transform: translateY(35px);
+  transition: 1s ease-in-out 1s;
+  z-index: 20;
+}
+
+.browseicon {
+  display: flex;
+  position: relative;
+  text-align: center;
+}
+
+.browse {
+  display: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.browseicon:hover .browse {
+  display: block;
+  background-color: #1f1f1f;
+  margin-top: 25px;
+  padding: 5px;
+  border-radius: 4px;
+  position: absolute;
+  transform: translateY(35px);
+  transition: 1s ease-in-out 1s;
+  z-index: 20;
+}
+
+.box h4:hover {
+  font-size: 17px;
+  color: white;
+}
+
+.next2:hover {
+  transform: scale(1.05);
+  color: white;
+}
+
+.login:hover {
+  transform: scale(1.05);
+}
+
+
+.hov {
+  display: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.image:hover {
+  background-color: #727272;
+}
+
+.image:hover .hov{
+  display: block;
+  padding: 5px;
+  color: #b3b3b3;
+  border: 1px solid rgb(163, 157, 157);
+  border-radius: 5px;
+  position: absolute;
+  transform: translateX(5px) translateY(5px);
+  transition: 1s ease-in-out 4s;
+  z-index: 20;
+}
+
+.range img:hover{
+  display: flex;
+  transition: all .2s ease-in-out;
+  
+
+}

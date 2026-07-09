@@ -1,0 +1,24 @@
+.border {
+    border: 2px solid white;
+    margin: 3px;
+}
+
+.svg {
+    filter: invert(1);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify {
+    justify-content: center;
+}
+
+.align {
+    align-items: center;
+}
